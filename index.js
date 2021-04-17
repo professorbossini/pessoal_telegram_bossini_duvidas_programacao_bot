@@ -1,12 +1,12 @@
+const dotenv = require("dotenv");
+dotenv.config();
 const { Telegraf } = require("telegraf");
-//const Token = require("./token");
 const express = require("express");
 const app = express();
 app.get("/", (req, res) => {
   res.send("Hey");
 });
-app.listen(process.env.PORT || 3000);
-
+app.listen(process.env.PORT);
 const bot = new Telegraf(process.env.TOKEN);
 
 const base = [
