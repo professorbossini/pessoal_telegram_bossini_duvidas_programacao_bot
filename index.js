@@ -1,5 +1,5 @@
 const { Telegraf } = require("telegraf");
-const Token = require("./token");
+//const Token = require("./token");
 const express = require("express");
 const app = express();
 app.get("/", (req, res) => {
@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
 });
 app.listen(process.env.PORT || 3000);
 
-const bot = new Telegraf(process.env.TOKEN || Token.token);
+const bot = new Telegraf(process.env.TOKEN);
 
 const base = [
   {
